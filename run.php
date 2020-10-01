@@ -50,13 +50,13 @@ $climate->usage();
 /** End Arguments Usage */
 
 /** Select */
-$input_pilih = $climate->br()->shout()->input('> Enter your choice (1-29) : ');
+$input_pilih = $climate->br()->shout()->input('> Enter your choice sob (1-29) : ');
 
 $pilih = $input_pilih->prompt();
 /** End Select */
 
 if($pilih>29 OR $pilih<1){
-    $climate->br()->error('Options not available, please choose existing ones!');
+    $climate->br()->error('Options is not available, please choose existing ones!');
 
     /** Enter Select return */
     $input_pilih = $climate->br()->shout()->input('> Enter your choice (1-29) : ');
@@ -155,10 +155,10 @@ if($pilih==1){
     $namatools = "\e[1;32mbrute force Member Group by ID\e[0m";
 }
 if($type=="wahyuarifpurnomo"){
-    $climate->br()->error("You don't choose anywhere tools.");
+    $climate->br()->error("You don't choose anywhere tools, please choose.");
 }else{
-    $climate->br()->info('You have selected tools ' . $namatools);
-    $climate->br()->info('load the tool you requested');
+    $climate->br()->info('You have selected the tools ' . $namatools);
+    $climate->br()->info('we load the tool you requested');
     $climate->br();
     progress($progress);
 
